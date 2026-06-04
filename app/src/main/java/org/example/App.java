@@ -3,12 +3,22 @@
  */
 package org.example;
 
+import org.openqa.selenium.WebDriver;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        
+        Checkbox checkbox = new Checkbox();
+        try{
+            checkbox.initDriver();
+            checkbox.launchBrowser();
+            checkbox.testCase();
+        } catch(Exception e){
+            System.err.println("Test Failed:   "+ e.getMessage());
+            e.printStackTrace();
+        } finally{
+            checkbox.closeBrowser();
+        } 
     }
 }

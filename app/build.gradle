@@ -23,6 +23,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation libs.guava
+
+    // Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation 'org.seleniumhq.selenium:selenium-java:4.44.0'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
