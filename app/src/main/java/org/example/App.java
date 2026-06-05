@@ -14,6 +14,8 @@ public class App {
             checkbox.initDriver();
             checkbox.launchBrowser();
             checkbox.testCase();
+            checkbox.testCase02();
+            checkbox.testCase03();
         } catch(Exception e){
             System.err.println("Test Failed:   "+ e.getMessage());
             e.printStackTrace();
