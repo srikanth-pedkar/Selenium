@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class App {
 
     public static void main(String[] args) {
-        
+        /*
         Checkbox checkbox = new Checkbox();
         try{
             checkbox.initDriver();
@@ -22,5 +22,19 @@ public class App {
         } finally{
             checkbox.closeBrowser();
         } 
+        */
+        Radiobutton radiobtn = new Radiobutton();
+
+        try{
+            radiobtn.initDriver();
+            radiobtn.openURL();
+            radiobtn.testCase01();
+            radiobtn.testCase02();
+            radiobtn.testCase03();
+        }catch(Exception e){
+            System.out.println("Exception occurred : "+e.getMessage());
+        }finally{
+            radiobtn.closeBrowser();
+        }
     }
 }
