@@ -3,7 +3,7 @@
  */
 package org.example;
 
-import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebDriver;
 
 public class App {
 
@@ -23,6 +23,8 @@ public class App {
             checkbox.closeBrowser();
         } 
         */
+
+        /*
         Radiobutton radiobtn = new Radiobutton();
 
         try{
@@ -35,6 +37,21 @@ public class App {
             System.out.println("Exception occurred : "+e.getMessage());
         }finally{
             radiobtn.closeBrowser();
+        }
+        */
+
+        Dropdown dropdown = new Dropdown();
+        
+        try{
+            dropdown.initDriver();
+            dropdown.openBrowser();
+            dropdown.testCase01();
+            dropdown.testCase02();
+            dropdown.testCase03();
+        }catch(Exception e){
+            System.err.println("Exception occurred : "+ e.getMessage());
+        }finally{
+            dropdown.closeBrowser();
         }
     }
 }
